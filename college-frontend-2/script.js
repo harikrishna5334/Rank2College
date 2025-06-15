@@ -1,4 +1,4 @@
-const backendBaseUrl = "http://localhost:8080/students";  // This URL might when bakend hosted somewhere on internet
+const backendBaseUrl = "http://localhost:8080/students";  // This URL might when backend hosted somewhere on internet
 
 function filterByBranch() {
     const rank = document.getElementById("rank").value;
