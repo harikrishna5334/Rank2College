@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Predictor - Branch Filter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>College Predictor V2.0 (Branch Filter)</h1>
+
+      <section class="filter-section">
+        <h2>Filter by Branch</h2>
+        <input type="number" id="rank" placeholder="Enter Rank" />
+        <!-- <input type="text" id="branchCode" placeholder="Enter Branch Code (e.g., CSE, CSD)"> -->
+        <label for="department-select">Choose a Department:</label>
+        <select id="branchCode" name="department">
+          <option value="" disabled selected>Select an option</option>
+          <option value="CSE">COMPUTER SCIENCE AND ENGINEERING</option>
+          <option value="CSM">
+            COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND
+            MACHINE LEARNING)
+          </option>
+          <option value="ECE">ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+          <option value="EEE">ELECTRICAL AND ELECTRONICS ENGINEERING</option>
+          <option value="MEC">MECHANICAL ENGINEERING</option>
+          <option value="CIV">CIVIL ENGINEERING</option>
+          <option value="CSD">
+            COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)
+          </option>
+          <option value="CSO">COMPUTER SCIENCE AND ENGINEERING (IOT)</option>
+          <option value="AIM">
+            ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
+          </option>
+          <option value="MIN">MINING ENGINEERING</option>
+          <option value="INF">INFORMATION TECHNOLOGY</option>
+          <option value="PHD">PHARM - D (M.P.C. STREAM)</option>
+          <option value="PHM">B. PHARMACY (M.P.C. STREAM)</option>
+          <option value="CSC">
+            COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)
+          </option>
+          <option value="CSW">
+            COMPUTER ENGINEERING(SOFTWARE ENGINEERING)
+          </option>
+          <option value="AID">ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</option>
+          <option value="BME">BIO-MEDICAL ENGINEERING</option>
+          <option value="CHE">CHEMICAL ENGINEERING</option>
+          <option value="CSB">COMPUTER SCIENCE AND BUSINESS SYSTEM</option>
+          <option value="PHE">PHARMACEUTICAL ENGINEERING</option>
+          <option value="AGR">AGRICULTURAL ENGINEERING</option>
+          <option value="BIO">BIO-TECHNOLOGY</option>
+          <option value="CIC">
+            CSE (IoT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)
+          </option>
+          <option value="DRG">DAIRYING</option>
+          <option value="FDT">FOOD TECHNOLOGY</option>
+          <option value="CSG">COMPUTER SCIENCE & DESIGN</option>
+          <option value="AI">ARTIFICIAL INTELLIGENCE</option>
+          <option value="EIE">
+            ELECTRONICS AND INSTRUMENTATION ENGINEERING
+          </option>
+          <option value="CST">COMPUTER SCIENCE AND TECHNOLOGY</option>
+          <option value="ETM">ELECTRONICS AND TELEMATICS</option>
+          <option value="ANE">AERONAUTICAL ENGINEERING</option>
+          <option value="CSI">
+            COMPUTER SCIENCE AND INFORMATION TECHNOLOGY
+          </option>
+          <option value="ECM">ELECTRONICS AND COMPUTER ENGINEERING</option>
+          <option value="DTD">
+            DIGITAL TECHNIQUES FOR DESIGN AND PLANNING
+          </option>
+          <option value="PLG">PLANNING</option>
+          <option value="MET">METALLURGICAL ENGINEERING</option>
+          <option value="MMS">
+            BTECH MECHANICAL WITH MTECH MANUFACTURING SYSTEMS
+          </option>
+          <option value="MTE">BTECH MECHANICAL WITH MTECH THERMAL ENGG</option>
+          <option value="CSN">COMPUTER SCIENCE & ENGINEERING (NETWORKS)</option>
+        </select>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <select id="caste">
+          <option value="oc">OC</option>
+          <option value="bca">BCA</option>
+          <option value="bcb">BCB</option>
+          <option value="bcc">BCC</option>
+          <option value="bcd">BCD</option>
+          <option value="bce">BCE</option>
+          <option value="sc">SC</option>
+          <option value="st">ST</option>
+          <option value="ews">EWS</option>
+        </select>
+        <button onclick="filterByBranch()">Search</button>
+      </section>
+
+      <section class="result-section">
+        <h2>Eligible Colleges</h2>
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>Institute Code</th>
+              <th>Institute Name</th>
+              <th>Branch Code</th>
+              <th>Branch Name</th>
+              <th>Place</th>
+              <th>District Code</th>
+              <th>Tuition Fee</th>
+              <th>Affiliated To</th>
+              <th>Cutoff Rank</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Populated dynamically -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
